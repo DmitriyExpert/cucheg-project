@@ -1,0 +1,14 @@
+@use 'helpers' as *;
+
+:root {
+
+  --border: var(--border-width-m) solid var(--accent-color);
+
+  --font-family-base: 'Inter', sans-serif;
+  --font-family-accent: 'Manrope', sans-serif;
+  --container-width: $container-desktop-width;
+  --container-padding-x: 15px;
+  --section-padding-y: #{fluid(100, 40)};
+  --transition-duration: 0.2s;
+  --transition-duration-longer: 0.4s;
+}

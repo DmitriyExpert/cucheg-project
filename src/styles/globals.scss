@@ -1,0 +1,136 @@
+@use 'helpers' as *;
+
+html {
+
+  &.is-lock {
+    overflow: hidden;
+  }
+}
+
+.visible__mobile {
+  display: none;
+
+  @include mobile {
+    display: flex;
+  }
+}
+
+.d-n {
+  display: none !important;
+}
+
+body {
+
+  @include fluid-text(20, 14);
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family-base);
+  color: var(--dark-color);
+  background-color: var(--white-color);
+}
+
+main {
+  flex-grow: 1;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  color: var(--accent-color);
+  font-family: var(--font-family-accent);
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+h1,
+.h1 {
+
+  @include fluid-text(50, 26);
+
+  font-weight: 700;
+}
+
+h2,
+.h2 {
+
+  @include fluid-text(40, 24);
+
+  font-weight: 700;
+}
+
+h3,
+.h3 {
+
+  @include fluid-text(28, 22);
+
+  font-weight: 700;
+}
+
+h4,
+.h4 {
+
+  @include fluid-text(26, 18);
+
+  font-weight: 600;
+}
+
+h5,
+.h5 {
+
+  @include fluid-text(24, 18);
+
+  font-weight: 500;
+
+  &::after {
+    width: 4px;
+  }
+}
+
+h6,
+.h6 {
+
+  @include fluid-text(20, 16);
+
+  font-weight: 600;
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  color: inherit;
+
+  @include hover {
+    color: var(--highlighting-color);
+  }
+
+  &[class] {
+    text-decoration: none;
+  }
+}
+
+:focus-visible {
+
+  @include focus-visible;
+}
+
+p {
+  font-weight: 500;
+  line-height: 1.2;
+}
